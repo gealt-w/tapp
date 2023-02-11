@@ -1,0 +1,161 @@
+
+
+html,body{ 
+	width:100%;
+	height:100%;
+    background: #001809;
+    margin: 0;
+}
+
+
+
+/* ---- header container ---- */
+
+header {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+
+/* ---- nav ---- */
+nav {
+  width: 100%;
+  height: 170px;  
+  text-align: center;
+  z-index: 1000; 
+}
+
+/* ---- video ---- */
+#video-wrapper {
+  margin: 0 auto;
+  width: 1360px;
+  height: 580px;
+  background: grey;
+  overflow: hidden;
+  border-radius: 290px;
+}
+
+#header-video {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+
+}
+
+.video-overlay {
+  position: absolute;
+  width: 1360px;
+  height: 580px;
+}
+
+#multiply-blue{
+  background: rgba(102, 211, 255, 0.8);
+  mix-blend-mode: multiply;
+  z-index: 98;
+  border-radius: 290px;
+}
+
+#multiply-grey{
+  background: rgba(0,0,0, 0.2);
+  mix-blend-mode: multiply;
+  z-index: 99;
+  border-radius: 290px;
+}
+
+/* ---- animation text ---- */
+
+.text-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 102;
+  transform: translateX(-50%);
+}
+
+.animate {
+    margin-top: 88px;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-direction:normal;
+    animation-timing-function: ease-in-out;
+    animation-name: textFade;
+    opacity: 0;
+}
+
+#tapp1{
+    animation-delay: 0.3s;
+}
+
+
+#tapp2{
+    animation-delay: 5.3s;
+}
+
+#tapp3{
+    animation-delay: 10.3s;
+}
+
+@keyframes textFade {
+  0% {
+    opacity: 0;
+
+  }
+  11.1111%, 22.2222%  {
+      opacity: 1;
+  }
+    
+  33.3333%, 100% {
+    opacity: 0;
+  }
+}
+
+/* ---- animate circels ---- */
+
+.circles {
+	 height: 750px;
+	 position: absolute;
+	 width: 750px;
+    z-index: 100;
+    left: 50%;
+    top: 90px;
+    transform: translateX(-50%); 
+}
+ .circles > div {
+     border-radius: 50%;
+	 height: 100%;
+	 opacity: 0;
+	 position: absolute;
+	 width: 100%;
+    animation: growAndFade 3.9s infinite ease-out;
+     /* svg dots */
+	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 365.37 365.41'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %2300e184%3B %7D %3C/style%3E%3C/defs%3E%3Ccircle class='cls-1' cx='359.05' cy='183.54' r='6.32'/%3E%3Ccircle class='cls-1' cx='344.66' cy='250.68' r='6.32'/%3E%3Ccircle class='cls-1' cx='306.22' cy='307.25' r='6.32'/%3E%3Ccircle class='cls-1' cx='249.31' cy='345.16' r='6.32'/%3E%3Ccircle class='cls-1' cx='182.1' cy='359.1' r='6.32'/%3E%3Ccircle class='cls-1' cx='114.95' cy='344.75' r='6.32'/%3E%3Ccircle class='cls-1' cx='58.33' cy='306.38' r='6.32'/%3E%3Ccircle class='cls-1' cx='20.34' cy='249.52' r='6.32'/%3E%3Ccircle class='cls-1' cx='6.32' cy='182.32' r='6.32'/%3E%3Ccircle class='cls-1' cx='20.62' cy='115.17' r='6.32'/%3E%3Ccircle class='cls-1' cx='58.91' cy='58.5' r='6.32'/%3E%3Ccircle class='cls-1' cx='115.72' cy='20.44' r='6.32'/%3E%3Ccircle class='cls-1' cx='182.91' cy='6.32' r='6.32'/%3E%3Ccircle class='cls-1' cx='250.08' cy='20.57' r='6.32'/%3E%3Ccircle class='cls-1' cx='306.79' cy='58.79' r='6.32'/%3E%3Ccircle class='cls-1' cx='344.93' cy='115.55' r='6.32'/%3E%3C/svg%3E");
+}
+ .circles .circle1 {
+	 animation-delay: 0s;
+}
+ .circles .circle2 {
+	 animation-delay: 1.3s;
+}
+ .circles .circle3 {
+	 animation-delay: 2.6s;
+}
+ .circles .circle4 {
+	 animation-delay: 3.9s;
+}
+        
+        
+ @keyframes growAndFade {
+	 0% {
+		 opacity: 0;
+		 transform: scale(0.3) rotate(0);
+	}
+     25% {
+		 opacity: 0.7;
+	}
+	 100% {
+		 opacity: 0;
+		 transform: scale(0.95) rotate(45deg);
+	}
+}
