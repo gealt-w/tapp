@@ -33,6 +33,8 @@ nav {
   background: grey;
   overflow: hidden;
   border-radius: 290px;
+  /* ---- safari fix border radius ---- */
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
 #header-video {
